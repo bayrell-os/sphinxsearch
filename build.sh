@@ -24,21 +24,23 @@ case "$1" in
 	
 	amd64)
 		export DOCKER_DEFAULT_PLATFORM=linux/amd64
-		docker build ./ -t bayrell/$IMAGE:$VERSION-$SUBVERSION \
+		docker build ./ -t bayrell/$IMAGE:$VERSION-$SUBVERSION-amd64 \
 			--file Dockerfile --progress=plain --build-arg ARCH=amd64
 	;;
 	
 	arm64v8)
 		export DOCKER_DEFAULT_PLATFORM=linux/arm64/v8
 		docker build ./ -t bayrell/$IMAGE:$VERSION-$SUBVERSION-arm64v8 \
-			--file Dockerfile --build-arg ARCH=arm64v8 --build-arg APT_MIRROR=$APT_MIRROR \
+			--file Dockerfile --progress=plain --build-arg ARCH=arm64v8 \
+			--build-arg APT_MIRROR=$APT_MIRROR \
 			--platform linux/arm64/v8
 	;;
 	
 	arm32v7)
 		export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
 		docker build ./ -t bayrell/$IMAGE:$VERSION-$SUBVERSION-arm32v7 \
-			--file Dockerfile --build-arg ARCH=arm32v7 --build-arg APT_MIRROR=$APT_MIRROR \
+			--file Dockerfile --progress=plain --build-arg ARCH=arm32v7 \
+			--build-arg APT_MIRROR=$APT_MIRROR \
 			--platform linux/arm/v7
 	;;
 	
