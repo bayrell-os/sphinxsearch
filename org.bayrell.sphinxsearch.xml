@@ -1,0 +1,34 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+<template>
+	<uid>org.bayrell.sphinxsearch</uid>
+	<name>Sphinx Search Engine</name>
+	<version>1.0</version>
+	<date>2024-03-24T16:06:00+05:00</date>
+	<maintainer>Ildar &lt;ildar@bayrell.org&gt;</maintainer>
+	<marketplace>https://cloud.bayrell.org/</marketplace>
+	<arch>amd64</arch>
+	<yaml>
+		<services>
+			<_var_app_name_>
+				<image>docker.io/bayrell/sphinxsearch:1.0</image>
+				<volumes>_var_app_name_:/data</volumes>
+				<environment>
+					<SPHINX_CONF></SPHINX_CONF>
+				</environment>
+			</_var_app_name_>
+		</services>
+		<volumes>
+			<_var_app_name_ />
+		</volumes>
+	</yaml>
+    <variables>
+    </variables>
+	<modificators>
+		<li>org.bayrell.modificator.cloud_os</li>
+		<li>org.bayrell.modificator.deploy_hostname</li>
+	</modificators>
+	<patch>
+		<name>Template patch</name>
+		<operations></operations>
+	</patch>
+</template>
