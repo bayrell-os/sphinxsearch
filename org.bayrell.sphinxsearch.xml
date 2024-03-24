@@ -2,7 +2,7 @@
 <template>
 	<uid>org.bayrell.sphinxsearch</uid>
 	<name>Sphinx Search Engine</name>
-	<version>1.0</version>
+	<version>2.2-1</version>
 	<date>2024-03-24T16:06:00+05:00</date>
 	<maintainer>Ildar &lt;ildar@bayrell.org&gt;</maintainer>
 	<marketplace>https://cloud.bayrell.org/</marketplace>
@@ -10,7 +10,7 @@
 	<yaml>
 		<services>
 			<_var_app_name_>
-				<image>docker.io/bayrell/sphinxsearch:1.0</image>
+				<image>docker.io/bayrell/sphinxsearch:2.2-1</image>
 				<volumes>_var_app_name_:/data</volumes>
 				<environment>
 					<SPHINX_CONF></SPHINX_CONF>
